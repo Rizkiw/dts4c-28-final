@@ -17,3 +17,12 @@ Contoh: `dts4a-01-final`
 ## Branching, commit
 
 Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun hasil akhirnya harus di merge ke branch `main` dan di push ke Github. Pastikan hasil akhir kode sudah ter-push!
+
+## Final Project
+1. Video Dokumentasi
+   [GIF](https://gfycat.com/dangerousoldfashionedindianhare)
+2. Link Live App
+   [DTS NEWS](https://dts4c-28-final.web.app/)
+
+3. Penjelasan terkait project kalian, API, fitur unik
+   Sudah di coba tapi gagal dan waktunya tidak cukup
