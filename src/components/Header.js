@@ -1,35 +1,70 @@
-import React from "react";
-import "./Header.css";
+import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 
 import logo from "../assets/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+import { IconButton } from "@mui/material";
+import Link from "@mui/material/Link";
 
-export default function Header() {
+export default function Header(props) {
+  const [q, setQ] = useState(""); //fitur search
+
+  // console.log('header', props.data);
   return (
     <div className="header-wrap">
       <Container maxWidth="lg">
         <div className="header-menu-wrap">
-          <img src={logo} alt="Logo" height={50} />
+          <Link
+            href="/"
+            underline="hover"
+            color="inherit"
+            backgroundColor="hover"
+          >
+            <img src={logo} alt="Logo" height={50} />
+          </Link>
           <div>
             <InputBase
+              type="search"
+              name="search-form"
+              className="search-input"
               placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
             />
-            <SearchIcon />
-            <MenuIcon />
+            <IconButton sx={{ p: "10px" }} aria-label="menu">
+              <SearchIcon />
+            </IconButton>
+            {/* <Link
+            href="/signup"
+            underline="hover"
+            color="inherit"
+            backgroundColor="hover"
+          >
+            <h3>Login</h3>
+          </Link> */}
           </div>
         </div>
-        <ul className="menu">
-          <li>News</li>
-          <li>Sport</li>
-          <li>Sains</li>
-          <li>Tech</li>
-          <li>Entertainment</li>
-          <li>Life Style</li>
-        </ul>
+        <div className="menu">
+          <Link
+            href="/"
+            underline="hover"
+            color="inherit"
+            backgroundColor="hover"
+          >
+            <h3>Home</h3>
+          </Link>
+          <Link href="/headline" underline="hover" color="inherit">
+            <h3>Headline</h3>
+          </Link>
+          <Link href="/sport" underline="hover" color="inherit">
+            <h3>Sport</h3>
+          </Link>
+          <Link href="/science" underline="hover" color="inherit">
+            <h3>Science</h3>
+          </Link>
+        </div>
       </Container>
     </div>
   );

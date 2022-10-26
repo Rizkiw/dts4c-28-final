@@ -1,51 +1,30 @@
-import React,{ useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import "./App.css";
-
-import Header from "./components/Header";
-import Footer from './components/Footer';
-
+import { SignIn } from "./components/Auth/SignIn";
+import { SignUp } from "./components/Auth/SignUp";
+import { listener } from "./components/utils/listener";
+import HeadlinePage from "./pages/HeadlinePage";
+import HomePage from "./pages/HomePage";
+import SciencePage from "./pages/SciencePage";
+import SportPage from "./pages/SportPage";
+ 
 function App() {
-  
-  const [data, setData] = useState();
-  const [title, setTitle] = useState('');
-  
-  
-    // https://newsapi.org/v2/top-headlines?country=us&apiKey=e10c6e1cb638440c9fc6184d93c1d0af
-    // https://content.guardianapis.com/search?api-key=d93773f5-95a1-4d37-8571-a46550159fed
-  
-  useEffect(() => {
-    axios
-      .get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=e10c6e1cb638440c9fc6184d93c1d0af"
-      )
-      .then(response => setData(response.data.articles))
-      .catch((err) => console.log('show error', err));
-  }, []);
-
-  const showArticles = data.map((news) => (
-    <div key={news.url}>
-      {news}
-    </div>
-    ));
-  
-  console.log('data', showArticles);
-
-  console.log('data', data);
+  useEffect(() => listener(console.log), []);
 
   return (
     <div className="App">
-      <Header />
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <h1>CONTENT</h1>
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/headline' element={<HeadlinePage />} />
+          <Route path='/sport' element={<SportPage />} />
+          <Route path='/science' element={<SciencePage />} />
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignUp />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

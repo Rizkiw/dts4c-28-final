@@ -1,11 +1,31 @@
-.App {
+.App  {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'Playfair Display', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App h1 {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +56,122 @@
     transform: rotate(360deg);
   }
 }
+
+
+.news-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.news-author {
+  font-weight: bold;
+  font-size: 11px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.news-content {
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  text-align: justify;
+}
+
+.news-source {
+  font-style: italic;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.news-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.news-card {
+  margin: 1rem 0;
+}
+
+.skeleton {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.Header h3 {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-wrap {
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 20px -2px rgb(0 0 0 / 0.2);
+}
+
+.header-menu-wrap {
+  justify-content: space-between;
+  display: flex;
+}
+
+img {
+  padding-bottom: 0.5rem;
+}
+
+.card {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top:0;
+  z-index: 1;
+}
+
+.menu h3 {
+  padding-right: 1rem;
+  font-weight: bold;
+}
+
+.footer-bg {
+  filter: blur(2px);
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.foot-bg {
+  width: 100%;
+  height: 200px;
+  background-color: lightsteelblue;
+  box-shadow: 0 6px 8px -2px rgb(0 0 0 / 0.2);
+}
+
+.menu-foot {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.newsletter h3 {
+  padding-right: 2rem;
+}
+
+.copyright {
+  text-align: center;
+}
+
