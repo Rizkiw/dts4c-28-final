@@ -15,7 +15,7 @@ function NewsArticles(data) {
   
   // console.log("news article", showArticle.url);
 
-  const openInNewTab = url => {
+  const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
