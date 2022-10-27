@@ -104,18 +104,24 @@ code {
   font-weight: bold;
 }
 
-.header-wrap {
-  display: flex;
-  padding-top: 2rem;
+.header {
   padding-bottom: 0.5rem;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 6px 20px -2px rgb(0 0 0 / 0.2);
+  position: sticky;
+  z-index: 1;
+}
+
+.header-wrap {
+  display: flex;
 }
 
 .header-menu-wrap {
   justify-content: space-between;
   display: flex;
+  padding-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 img {
@@ -126,17 +132,35 @@ img {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.menu {
+.navbar {
+  overflow: hidden;
+  background: #ffffff;
   display: flex;
   justify-content: space-around;
-  position: sticky;
-  top:0;
-  z-index: 1;
 }
 
-.menu h3 {
-  padding-right: 1rem;
-  font-weight: bold;
+.navbar h3:hover {
+  color: white;
+  background-color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100vw;
+  transition: all 0.5s ease;
+  animation: smoothScroll 1s forwards;
+  box-shadow: 0 6px 20px -2px rgb(0 0 0 / 0.2);
+  background-color: rgb(106, 160, 230);
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu h3 {
+  padding: 0 2rem;
 }
 
 .footer-bg {
