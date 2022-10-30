@@ -13,13 +13,13 @@ import { CardActionArea, Divider } from "@mui/material";
 function NewsArticles(data) {
   const showArticle = data.data;
   
-  // console.log("news article", showArticle.url);
+  console.log("news article", showArticle);
 
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const getTime = showArticle.publishedAt;
+  const getTime = showArticle.published_at;
 
   //   let dom = new JSDOM()
 
@@ -29,7 +29,7 @@ function NewsArticles(data) {
         <CardMedia
           component="img"
           height="140"
-          image={showArticle.urlToImage}
+          image={showArticle.image}
           alt='No Images'
         />
         <CardContent>
@@ -49,11 +49,11 @@ function NewsArticles(data) {
             component="div"
             className="news-author"
           >
-            Penulis : {showArticle.author}<br />
+            {/* Penulis : {showArticle.author}<br /> */}
             Rilis : {moment(getTime).format('LLL')}
           </Typography>
           <Typography variant="body2" color="text.secondary" className="news-content">
-            {showArticle.content}
+            {/* {showArticle.content} */}
           </Typography>
           <Typography
             gutterBottom
@@ -62,7 +62,7 @@ function NewsArticles(data) {
             className="news-source"
           >
             <br />
-            Sumber : {showArticle.source.name}<br />
+            {/* Sumber : {showArticle.source.name}<br /> */}
           </Typography>
         </CardContent>
       </CardActionArea>

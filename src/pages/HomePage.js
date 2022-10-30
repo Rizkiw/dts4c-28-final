@@ -8,16 +8,16 @@ import News from "../components/News";
 const HomePage = () => {
   const [data, setData] = useState();
 
-  let url =
-    "https://newsapi.org/v2/everything?" +
-    "q=world&language=id&" +
-    "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
+  let url = 'https://jakpost.vercel.app/api/category/most-viewed';
+    // "https://newsapi.org/v2/everything?" +
+    // "q=world&language=id&" +
+    // "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
 
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setData(response.data.articles))
-      // .then((response) => console.log(response.data.results))
+      .then((response) => setData(response.data.posts))
+      // .then((response) => console.log(response.data.posts))
       .catch((err) => console.log("show error", err));
   }, []);
 
