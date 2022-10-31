@@ -163,6 +163,10 @@ img {
   padding: 0 2rem;
 }
 
+.navbar-menu :link {
+  text-decoration: none;
+}
+
 .footer-bg {
   filter: blur(2px);
   background-size: cover;

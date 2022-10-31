@@ -19,7 +19,7 @@ function NewsArticles(data) {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const getTime = showArticle.published_at;
+  const getTime = showArticle.publishedAt;
 
   //   let dom = new JSDOM()
 
@@ -29,7 +29,7 @@ function NewsArticles(data) {
         <CardMedia
           component="img"
           height="140"
-          image={showArticle.image}
+          image={showArticle.urlToImage}
           alt='No Images'
         />
         <CardContent>
@@ -49,11 +49,11 @@ function NewsArticles(data) {
             component="div"
             className="news-author"
           >
-            {/* Penulis : {showArticle.author}<br /> */}
+            Penulis : {showArticle.author}<br />
             Rilis : {moment(getTime).format('LLL')}
           </Typography>
           <Typography variant="body2" color="text.secondary" className="news-content">
-            {/* {showArticle.content} */}
+            {showArticle.content}
           </Typography>
           <Typography
             gutterBottom
