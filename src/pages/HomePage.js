@@ -8,7 +8,8 @@ import News from "../components/News";
 const HomePage = () => {
   const [data, setData] = useState();
 
-  let url =
+  let url = 
+  // 'https://jakpost.vercel.app/api/category/most-viewed';
     "https://newsapi.org/v2/everything?" +
     "q=world&language=id&" +
     "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
@@ -16,12 +17,13 @@ const HomePage = () => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setData(response.data.articles))
-      // .then((response) => console.log(response.data.results))
+      .then((response) => {setData(response.data.articles);
+        response.header("Access-Control-Allow-Origin", "*");})
+      // .then((response) => console.log(response.data.posts))
       .catch((err) => console.log("show error", err));
   }, []);
 
-  // console.log("data", data);
+  console.log("data", data);
 
   return (
     <div>

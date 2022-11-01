@@ -7,13 +7,13 @@ import Box from "@mui/material/Box";
 
 function News(props) {
   const news = props.data;
-  // console.log("from news.js", news);
+  console.log("from news.js", news);
 
   return (
     <Container maxWidth="lg">
       <div className="news-wrap">
         {news ? (
-          news.map((news) => <NewsArticles data={news} key={news.url} />)
+          news.map((news,i) => <NewsArticles data={news} key={i} />)
         ) : (
           <div className='skeleton'>
           <Box sx={{ width: 1200 }}>
