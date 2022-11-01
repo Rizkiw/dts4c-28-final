@@ -139,6 +139,10 @@ img {
   justify-content: space-around;
 }
 
+.navbar-wrap {
+
+}
+
 .navbar h3:hover {
   color: white;
   background-color: black;
@@ -152,7 +156,8 @@ img {
   transition: all 0.5s ease;
   animation: smoothScroll 1s forwards;
   box-shadow: 0 6px 20px -2px rgb(0 0 0 / 0.2);
-  background-color: rgb(106, 160, 230);
+  /* background: rgb(14,71,144); */
+  /* background: linear-gradient(0deg, rgba(14,71,144,1) 0%, rgba(64,121,205,1) 39%, rgba(0,212,255,1) 100%); */
 }
 
 .navbar-menu {

@@ -75,13 +75,14 @@ export default function Header(props) {
         </div>
 
         {/* NAVBAR HERE */}
+        <div className="navbar-wrap">
         <Container maxWidth="sm" >
         <div
           id="sticky-navbar"
           className={`navbar${sticky.isSticky ? " sticky" : ""}`}
           ref={headerRef}
           style={{ marginTop: (sticky.offset-70) }}
-        >
+          >
           <div className="navbar-menu">
           <Link to="/" underline="hover" color="inherit">
             <h3>Home</h3>
@@ -98,6 +99,7 @@ export default function Header(props) {
           </div>
         </div>
         </Container>
+          </div>
         </Container>
     </div>
   );
