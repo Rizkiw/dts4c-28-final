@@ -24,12 +24,12 @@ function NewsArticles(data) {
   //   let dom = new JSDOM()
 
   return (
-    <Card sx={{ maxWidth: 345 }} className="news-card" onClick={() => openInNewTab(showArticle.url)}>
+    <Card sx={{ maxWidth: 345 }} className="news-card" onClick={() => openInNewTab(showArticle.link)}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={showArticle.urlToImage}
+          image={showArticle.image_url}
           alt='No Images'
         />
         <CardContent>
@@ -49,11 +49,11 @@ function NewsArticles(data) {
             component="div"
             className="news-author"
           >
-            Penulis : {showArticle.author}<br />
+            Penulis : {showArticle.creator}<br />
             Rilis : {moment(getTime).format('LLL')}
           </Typography>
           <Typography variant="body2" color="text.secondary" className="news-content">
-            {showArticle.content}
+            {showArticle.description}
           </Typography>
           <Typography
             gutterBottom
