@@ -8,24 +8,15 @@ import News from "../components/News";
 const HomePage = () => {
   const [data, setData] = useState();
 
-  let url = 
+  const url = 
+  'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&country=id';
+  
   //  'https://api.newscatcherapi.com/v2/sources?topic=business&lang=en&countries=US';
-   'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&country=id&language=in&category=top ';
+  //  https://newsdata.io/api/1/news?apikey=YOUR_API_KEY&country=au
     // 'https://jakpost.vercel.app/api/category/most-viewed';
     // "https://newsapi.org/v2/everything?" +
     // "q=world&language=id&" +
     // "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
-
-  // let options = {
-  //     method: 'GET',
-  //     url: 'https://api.newscatcherapi.com/v2/search',
-  //     // url: 'https://api.newscatcherapi.com/v2/sources?topic=business&lang=en&countries=US',
-  //     params: {q: 'all', lang: 'id', sort_by: 'relevancy', page: '1'},
-  //     headers: {
-  //       'x-api-key': '5KbF7vX9w0jUAD92YSuF6EKFHkH9UO8DpFhEUG-3ZXg'
-  //       // 'x-api-key': process.env.REACT_APP_API_KEY
-  //     }
-  // };
 
   // const options = {
   //   method: 'GET',
@@ -47,7 +38,7 @@ const HomePage = () => {
       .catch((err) => console.log("show error", err));
   }, []);
 
-  console.log("data", data);
+  // console.log("data", data);
 
   return (
     <div>

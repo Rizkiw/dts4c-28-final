@@ -86,11 +86,21 @@ code {
 
 .news-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
-.news-card {
+.news-card-img {
   margin: 1rem 0;
+  width: 340px;
+}
+
+.news-card-title {
+  margin: 1rem 1rem;
+  width: 100%;
+}
+
+.card-wrap {
+  display: flex;
 }
 
 .skeleton {
