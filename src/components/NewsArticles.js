@@ -24,12 +24,12 @@ function NewsArticles(data) {
   //   let dom = new JSDOM()
 
   return (
-    <Card sx={{ maxWidth: 345 }} className="news-card" onClick={() => openInNewTab(showArticle.url)}>
+    <Card sx={{ maxWidth: 345 }} className="news-card" onClick={() => openInNewTab(showArticle.link)}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={showArticle.urlToImage}
+          image={showArticle.image}
           alt='No Images'
         />
         <CardContent>
@@ -53,7 +53,7 @@ function NewsArticles(data) {
             Rilis : {moment(getTime).format('LLL')}
           </Typography>
           <Typography variant="body2" color="text.secondary" className="news-content">
-            {showArticle.content}
+            {showArticle.summary}
           </Typography>
           <Typography
             gutterBottom
