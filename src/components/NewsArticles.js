@@ -29,7 +29,7 @@ function NewsArticles(data) {
         <CardMedia
           component="img"
           height="140"
-          image={showArticle.image}
+          image={showArticle.image_url}
           alt='No Images'
         />
         <CardContent>
@@ -49,11 +49,11 @@ function NewsArticles(data) {
             component="div"
             className="news-author"
           >
-            Penulis : {showArticle.author}<br />
+            Penulis : {showArticle.creator}<br />
             Rilis : {moment(getTime).format('LLL')}
           </Typography>
           <Typography variant="body2" color="text.secondary" className="news-content">
-            {showArticle.summary}
+            {showArticle.description}
           </Typography>
           <Typography
             gutterBottom

@@ -9,7 +9,8 @@ const HomePage = () => {
   const [data, setData] = useState();
 
   let url = 
-   'https://api.newscatcherapi.com/v2/sources?topic=business&lang=en&countries=US';
+  //  'https://api.newscatcherapi.com/v2/sources?topic=business&lang=en&countries=US';
+   'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&country=id&language=in&category=top ';
     // 'https://jakpost.vercel.app/api/category/most-viewed';
     // "https://newsapi.org/v2/everything?" +
     // "q=world&language=id&" +
@@ -26,21 +27,21 @@ const HomePage = () => {
   //     }
   // };
 
-  const options = {
-    method: 'GET',
-    url: 'https://bing-news-search1.p.rapidapi.com/news',
-    params: {safeSearch: 'Off', textFormat: 'Raw'},
-    headers: {
-      'X-BingApis-SDK': 'true',
-      'X-RapidAPI-Key': 'ed5f0cdd14msh6f99f1762b26fabp1b6bc7jsn2939eac7ff0f',
-      'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
-    }
-  };
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://bing-news-search1.p.rapidapi.com/news',
+  //   params: {safeSearch: 'Off', textFormat: 'Raw'},
+  //   headers: {
+  //     'X-BingApis-SDK': 'true',
+  //     'X-RapidAPI-Key': 'ed5f0cdd14msh6f99f1762b26fabp1b6bc7jsn2939eac7ff0f',
+  //     'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
+  //   }
+  // };
 
   useEffect(() => {
     axios
-      .request(options)
-      .then((response) => {setData(response.data.value)})
+      .request(url)
+      .then((response) => {setData(response.data.results)})
         // response.header("Access-Control-Allow-Origin", "*");})
       // .then((response) => console.log(response.data.posts));
       .catch((err) => console.log("show error", err));
