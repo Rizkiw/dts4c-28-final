@@ -5,10 +5,11 @@ import "./App.css";
 import { SignIn } from "./components/Auth/SignIn";
 import { SignUp } from "./components/Auth/SignUp";
 import { listener } from "./components/utils/listener";
-import HeadlinePage from "./pages/HeadlinePage";
 import HomePage from "./pages/HomePage";
 import SciencePage from "./pages/SciencePage";
 import SportPage from "./pages/SportPage";
+import EntertaimentPage from "./pages/EntertaimentPage";
+import BusinessPage from "./pages/BusinessPage";
  
 function App() {
   useEffect(() => listener(console.log), []);
@@ -18,9 +19,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/headline' element={<HeadlinePage />} />
+          <Route path='/entertainment' element={<EntertaimentPage />} />
           <Route path='/sport' element={<SportPage />} />
           <Route path='/science' element={<SciencePage />} />
+          <Route path='/business' element={<BusinessPage />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
         </Routes>

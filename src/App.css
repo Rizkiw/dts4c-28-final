@@ -90,7 +90,7 @@ code {
 }
 
 .news-card-img {
-  margin: 1rem 0;
+  margin: 2rem 0;
   width: 340px;
 }
 
@@ -144,18 +144,21 @@ img {
 
 .navbar {
   overflow: hidden;
-  background: #ffffff;
   display: flex;
   justify-content: space-around;
+  background: rgb(255,0,0);
+  background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(205,64,64,1) 0%, rgba(101,9,9,1) 100%);
 }
 
 .navbar-wrap {
+  
+  background: rgb(255,0,0);
+  background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(205,64,64,1) 0%, rgba(101,9,9,1) 100%);
 
 }
 
 .navbar h3:hover {
-  color: white;
-  background-color: black;
+  color: yellow;
 }
 
 .sticky {
@@ -166,8 +169,8 @@ img {
   transition: all 0.5s ease;
   animation: smoothScroll 1s forwards;
   box-shadow: 0 6px 20px -2px rgb(0 0 0 / 0.2);
-  /* background: rgb(14,71,144); */
-  /* background: linear-gradient(0deg, rgba(14,71,144,1) 0%, rgba(64,121,205,1) 39%, rgba(0,212,255,1) 100%); */
+  background: rgb(255,0,0);
+  background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(205,64,64,1) 0%, rgba(101,9,9,1) 100%);
 }
 
 .navbar-menu {
@@ -176,6 +179,7 @@ img {
 
 .navbar-menu h3 {
   padding: 0 2rem;
+  color: white;
 }
 
 .navbar-menu :link {

@@ -41,13 +41,9 @@ export default function Header(props) {
   // console.log('header', props.data);
   return (
     <div className="header">
-        <Container maxWidth="lg">
+      <Container maxWidth="lg">
         <div className="header-menu-wrap">
-          <Link
-            to="/"
-            underline="hover"
-            color="inherit"
-          >
+          <Link to="/" underline="hover" color="inherit">
             <img src={logo} alt="Logo" height={50} />
           </Link>
           <div>
@@ -75,31 +71,34 @@ export default function Header(props) {
 
         {/* NAVBAR HERE */}
         <div className="navbar-wrap">
-        <Container maxWidth="sm" >
-        <div
-          id="sticky-navbar"
-          className={`navbar${sticky.isSticky ? " sticky" : ""}`}
-          ref={headerRef}
-          style={{ marginTop: (sticky.offset-70) }}
-          >
-          <div className="navbar-menu">
-          <Link to="/" underline="hover" color="inherit">
-            <h3>Home</h3>
-          </Link>
-          <Link to="/headline" underline="hover" color="inherit">
-            <h3>Headline</h3>
-          </Link>
-          <Link to="/sport" underline="hover" color="inherit">
-            <h3>Sport</h3>
-          </Link>
-          <Link to="/science" underline="hover" color="inherit">
-            <h3>Science</h3>
-          </Link>
-          </div>
+          <Container maxWidth="m">
+            <div
+              id="sticky-navbar"
+              className={`navbar${sticky.isSticky ? " sticky" : ""}`}
+              ref={headerRef}
+              style={{ marginTop: sticky.offset - 70 }}
+            >
+              <div className="navbar-menu">
+                <Link to="/" underline="hover" color="inherit">
+                  <h3>Home</h3>
+                </Link>
+                <Link to="/entertainment" underline="hover" color="inherit">
+                  <h3>Entertainment</h3>
+                </Link>
+                <Link to="/sport" underline="hover" color="inherit">
+                  <h3>Sport</h3>
+                </Link>
+                <Link to="/science" underline="hover" color="inherit">
+                  <h3>Science</h3>
+                </Link>{" "}
+                <Link to="/business" underline="hover" color="inherit">
+                  <h3>Business</h3>
+                </Link>
+              </div>
+            </div>
+          </Container>
         </div>
-        </Container>
-          </div>
-        </Container>
+      </Container>
     </div>
   );
 }

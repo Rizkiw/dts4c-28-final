@@ -24,7 +24,7 @@ function NewsArticles(data) {
 
   return (
     <div className="card-wrap">
-      <Card
+      <div
         className="news-card-img"
       >
           <CardMedia
@@ -33,7 +33,7 @@ function NewsArticles(data) {
             image={showArticle.image_url}
             alt='No Image'
           />
-        </Card>
+        </div>
 
         {/* title and description */}
         <Card
