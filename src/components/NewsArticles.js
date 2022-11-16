@@ -1,27 +1,29 @@
 import React from "react";
 import moment from "moment";
+import DetailNewsPage from "../pages/DetailNewsPage"; 
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Divider } from "@mui/material";
+import logoImg from "../assets/alt_image.png";
+import { Link } from "react-router-dom";
 
 // const { JSDOM } = require('jsdom');
 
 function NewsArticles(data) {
   const showArticle = data.data;
 
-  console.log("news article", showArticle);
-
   const openInNewTab = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
+      window.open(url, "_blank", "noopener,noreferrer");
+    };
+  
   const getTime = showArticle.pubDate;
-
-  //   let dom = new JSDOM()
-
+  const srcImg = showArticle.image_url ? showArticle.image_url : logoImg;
+  
+  
+  // console.log("news article", showArticle);
   return (
     <div className="card-wrap">
       <div
@@ -29,9 +31,9 @@ function NewsArticles(data) {
       >
           <CardMedia
             component="img"
-            height="180"
-            image={showArticle.image_url}
-            alt='No Image'
+            width="180"
+            image={srcImg}
+            alt='no image'
           />
         </div>
 
@@ -39,6 +41,7 @@ function NewsArticles(data) {
         <Card
         className="news-card-title"
         onClick={() => openInNewTab(showArticle.link)}
+        // onClick={() => openInNewTab(showArticle.link)}
       >
         <CardActionArea>
         <CardContent>

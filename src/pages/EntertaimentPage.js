@@ -10,7 +10,7 @@ const EntertaimentPage = () => {
     
   const [data, setData] = useState();
     let url =  
-    'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&category=entertainment&country=id'
+    'https://newsdata.io/api/1/news?apikey=pub_12668d62fb0893fe65b71e94a1b791fefd91d&country=id&language=in&category=entertainment'
     // "https://newsapi.org/v2/top-headlines?" +
     // "country=id&"+
     // "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
@@ -23,7 +23,7 @@ const EntertaimentPage = () => {
           .catch((err) => console.log("show error", err));
       }, []);
 
-      console.log("data", data);
+      // console.log("data", data);
 
     return (
         <div>

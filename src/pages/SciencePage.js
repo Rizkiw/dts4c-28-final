@@ -9,7 +9,7 @@ const SciencePage = () => {
   const [data, setData] = useState();
 
   let url =
-  'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&category=science&country=id'
+  'https://newsdata.io/api/1/news?apikey=pub_12668d62fb0893fe65b71e94a1b791fefd91d&country=id&language=in&category=science '
     // "https://newsapi.org/v2/top-headlines?" +
     // "country=id&category=science&" +
     // "apiKey=e10c6e1cb638440c9fc6184d93c1d0af";
