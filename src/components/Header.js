@@ -43,7 +43,7 @@ export default function Header(props) {
     <div className="header">
       <Container maxWidth="lg">
         <div className="header-menu-wrap">
-          <Link to="/" underline="hover" color="inherit">
+          <Link to="/" color="inherit">
             <img src={logo} alt="Logo" height={50} />
           </Link>
           <div>

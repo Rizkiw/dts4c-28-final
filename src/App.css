@@ -92,6 +92,8 @@ code {
 .news-card-img {
   margin: 2rem 0;
   width: 340px;
+  text-align: justify;
+  
 }
 
 .news-card-title {

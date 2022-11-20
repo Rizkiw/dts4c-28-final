@@ -9,7 +9,7 @@ const HomePage = () => {
   const [data, setData] = useState();
 
   const url = 
-  'https://newsdata.io/api/1/news?apikey=pub_12668400e187d026d6a9f0bab21731987b270&country=id';
+  'https://newsdata.io/api/1/news?apikey=pub_12668d62fb0893fe65b71e94a1b791fefd91d&country=id';
   
   //  'https://api.newscatcherapi.com/v2/sources?topic=business&lang=en&countries=US';
   //  https://newsdata.io/api/1/news?apikey=YOUR_API_KEY&country=au

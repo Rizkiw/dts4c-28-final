@@ -10,6 +10,7 @@ import SciencePage from "./pages/SciencePage";
 import SportPage from "./pages/SportPage";
 import EntertaimentPage from "./pages/EntertaimentPage";
 import BusinessPage from "./pages/BusinessPage";
+import DetailNewsPage from "./pages/DetailNewsPage";
  
 function App() {
   useEffect(() => listener(console.log), []);
@@ -25,6 +26,7 @@ function App() {
           <Route path='/business' element={<BusinessPage />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/detail' element={<DetailNewsPage />} />
         </Routes>
       </Router>
     </div>
