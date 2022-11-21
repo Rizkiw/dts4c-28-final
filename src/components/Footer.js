@@ -10,10 +10,10 @@ const Footer = () => {
         <Container maxWidth="lg">
           <div>
             <ul className="menu-foot">
-              <li>About</li>
+              {/* <li>About</li>
               <li>Contact</li>
               <li>Partners</li>
-              <li>Press</li>
+              <li>Press</li> */}
             </ul>
           </div>
           <div className="copyright">

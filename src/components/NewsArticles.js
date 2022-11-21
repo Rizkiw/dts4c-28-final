@@ -40,7 +40,7 @@ function NewsArticles(data) {
         {/* title and description */}
         <Card
         className="news-card-title"
-        onClick={() => openInNewTab(showArticle.link)}
+        onClick={() => openInNewTab(<DetailNewsPage />)}
         // onClick={() => openInNewTab(showArticle.link)}
       >
         <CardActionArea>

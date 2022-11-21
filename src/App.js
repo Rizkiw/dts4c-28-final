@@ -11,6 +11,7 @@ import SportPage from "./pages/SportPage";
 import EntertaimentPage from "./pages/EntertaimentPage";
 import BusinessPage from "./pages/BusinessPage";
 import DetailNewsPage from "./pages/DetailNewsPage";
+import ScrollToTop from "./components/ScrollToTop";
  
 function App() {
   useEffect(() => listener(console.log), []);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/entertainment' element={<EntertaimentPage />} />
