@@ -38,7 +38,7 @@ function NewsArticles(data) {
         </div>
 
         {/* title and description */}
-        <Card
+      <Card
         className="news-card-title"
         onClick={() => openInNewTab(<DetailNewsPage />)}
         // onClick={() => openInNewTab(showArticle.link)}

@@ -47,7 +47,7 @@ export default function Header(props) {
             <img src={logo} alt="Logo" height={50} />
           </Link>
           <div>
-            <InputBase
+            {/* <InputBase
               type="search"
               name="search-form"
               className="search-input"
@@ -57,7 +57,7 @@ export default function Header(props) {
             />
             <IconButton sx={{ p: "10px" }} aria-label="menu">
               <SearchIcon />
-            </IconButton>
+            </IconButton> */}
             {/* <Link
             href="/signup"
             underline="hover"

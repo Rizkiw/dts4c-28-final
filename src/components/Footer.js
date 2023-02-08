@@ -14,10 +14,10 @@ const Footer = () => {
               <li>Contact</li>
               <li>Partners</li>
               <li>Press</li> */}
-            </ul>
-          </div>
-          <div className="copyright">
             <p>Copyright 2022 <b>&copy; <span style={{color: 'red'}}>DTS</span> NEWS</b></p>
+            </ul>
+          <div className="copyright">
+          </div>
           </div>
         </Container>
       </Box>
