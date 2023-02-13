@@ -251,7 +251,23 @@ img {
   .navbar-menu {
     overflow: auto;
     white-space: nowrap;
+    font-size: 13px;
+  }
+  
+  .sticky .navbar-menu {
+    padding: 0.5rem;
   }
 
+  .header-menu-wrap {
+    justify-content: center;
+    display: flex;
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .skeleton {
+    padding: 0;
+    display:flex;
+  }
 
 }
